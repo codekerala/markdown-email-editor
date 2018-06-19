@@ -1,0 +1,151 @@
+$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #97e8f5;
+	color: #222;
+	font-family: helvetica;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.md {
+	height: 100%;
+	padding: 35px 50px;
+	&-inner {
+		height: 100%;
+		box-shadow: $box-shadow;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-btn {
+		text-align: right;
+	}
+	&-editor {
+		padding: 25px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		width: 50%;
+		background: #fff;
+		overflow-y: scroll;
+	}
+	&-preview {
+		padding: 25px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		width: 50%;
+		background: #f2f2f2;
+		overflow-y: scroll;
+	}
+	&-subject {
+		font-size: 16px;
+		line-height: 20px;
+		padding-bottom: 15px;
+	}
+	&-content {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 25px;
+		background: #fff;
+		img {
+			display: block;
+			width: 35%;
+			margin: 0 auto;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.form {
+	&-group {
+		margin-bottom: 15px;
+		label {
+			display: block;
+			font-size: 12px;
+			line-height: 12px;
+			margin-bottom: 5px;
+			color: #666;
+		}
+	}
+	&-control {
+		color: #222;
+		font-size: 14px;
+		line-height: 17px;
+		height: 32px;
+		background: #fafafa;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+		border-radius: 1px;
+		box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+		padding: 8px;
+		width: 100%;
+		display: block;
+		&:focus {
+			outline-style: dotted;
+			outline-width: 1px;
+			outline-offset: 1px;
+		}
+		&:active {
+			box-shadow: inset $box-shadow;
+		}
+	}
+}
+
+textarea.form-control {
+	height: 250px;
+}
+
+.btn {
+	border: none;
+	border-radius: 2px;
+	padding: 8px 16px;
+	display: inline-block;
+	position: relative;
+	text-shadow: none;
+	cursor: pointer;
+	transition: background 0.2s;
+	user-select: none;
+	text-transform: uppercase;
+	&:focus {
+		outline-style: dotted;
+		outline-width: 1px;
+		outline-offset: 1px;
+	}
+	&:active {
+		box-shadow: inset $box-shadow;
+	}
+	&-success {
+		background: #6bbd2e;
+		color: #fff;
+		box-shadow: 0 1px darken(#6bbd2e, 10%);
+	}
+}
+
+
+.form-list {
+	padding: 0;
+	li {
+		padding: 2px 8px;
+		border-radius: 2px;
+		color: #fff;
+		background: #3498dc;
+		display: inline-block;
+		margin-right: 5px;
+	}
+}

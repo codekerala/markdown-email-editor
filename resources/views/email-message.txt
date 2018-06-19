@@ -1,0 +1,15 @@
+# Invoice
+
+Dear {customer},
+
+You have a new invoice for **{amount}**. We appreciate your prompt payment.
+
+You can pay online using Paypal by following below link:
+
+{payment_link}
+
+Let us know once the payment is completed.
+
+Thank you!
+
+{business_name}
